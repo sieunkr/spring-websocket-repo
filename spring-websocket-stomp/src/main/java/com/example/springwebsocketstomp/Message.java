@@ -1,8 +1,9 @@
-package com.example.demo;
+package com.example.springwebsocketstomp;
 
-import lombok.*;
-
-// {"type":"", "sender":"me", "receiver":"b6268d02-ac43-fc6d-39bb-6e09151eb735", "data":"test..."}
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @Builder
@@ -11,7 +12,7 @@ import lombok.*;
 public class Message {
     private String type;
     private String sender;
-    private String receiver;
+    private String channelId;
     private Object data;
 
     public void setSender(String sender) {
